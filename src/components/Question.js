@@ -18,7 +18,6 @@ function Question({ questions, setQuestions }) {
   }
 
   function handleResetClick() {
-    questions.length = 0
     setQuestions([]);
   }
 
