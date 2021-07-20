@@ -1,38 +1,139 @@
+html, body, #root, #root>div {
+  height: 100%
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #628395;
+  text-transform: uppercase;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-size:80px;
+  margin-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form{
+  font-weight: bolder;
+  font-size: 30px;
+  color: #DFD5A5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form div{
+  margin: 0.8em;
+}
+
+ select{
+  text-align-last: center;
+  margin-top: 0.5em;
+   appearance: none;
+   outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 23px;
+  cursor: inherit;
+  line-height: inherit;
+ }
+
+#category-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #849FAE;
 }
 
-.App-link {
-  color: #61dafb;
+#start{
+  width: 200px;
+  height: 50px;
+  font-weight: bolder;
+  font-size: larger;
+  background-color: #849FAE;
+  border: none;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#radio-buttons{
+  font-size: 20px;
+}
+
+#question-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  background-color: #C1CFD7;
+  border-radius: 10px;
+}
+
+#question-section h2{
+  margin-bottom: 0;
+  font-size:70px;
+}
+
+#question-section h3{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#answers-section{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#answers-section button{
+font-size: 20px;
+ margin: 1.5em;
+ background-color: #C1CFD7;
+ border: none;
+ border-radius: 10px;
+ text-transform: uppercase;
+ font-weight: bolder;
+}
+
+#answers-section button:hover{
+ background-color:white;
+}
+
+#final-sections{
+  font-size: 30px;
+  background-color: #C1CFD7;
+  border-radius:10px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#final-sections button{
+  font-size: 20px;
+  text-transform: uppercase;
+ font-weight: bolder;
+ width: 100px;
+ height: 40px;
+ border: none;
+ border-radius: 8px;
+ background-color: #d62828;
 }

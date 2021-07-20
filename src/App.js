@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { getCategories } from "./api/getcategorydata";
+import Quizcriteria from "./components/Quizcriteria";
+import Question from "./components/Question";
+import "./App.css";
 
 function App() {
+  const [categories, setCategorries] = useState([]);
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    getCategories().then((data) => setCategorries(data));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {questions.length === 0 ? (
+        <>
+          <h1>Start the Quiz</h1>
+          <Quizcriteria categories={categories} setQuestions={setQuestions} />
+        </>
+
+      ) : (
+        <Question questions={questions} setQuestions={setQuestions} />
+      )}
     </div>
   );
 }
