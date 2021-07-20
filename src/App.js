@@ -19,7 +19,6 @@ function App() {
           <h1>Start the Quiz</h1>
           <Quizcriteria categories={categories} setQuestions={setQuestions} />
         </>
-
       ) : (
         <Question questions={questions} setQuestions={setQuestions} />
       )}
